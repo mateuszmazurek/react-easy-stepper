@@ -10,7 +10,8 @@ function Step(props) {
     className, prefixCls, style, tailWidth,
     status = 'wait', iconPrefix, icon, wrapperStyle,
     adjustMarginRight, stepLast, stepNumber,
-    description, title, ...restProps } = props;
+    description, children, title, ...restProps } = props;
+  const content = children || description;
   const iconClassName = classNames({
     [`${prefixCls}-icon`]: true,
     [`${iconPrefix}icon`]: true,
@@ -53,7 +54,7 @@ function Step(props) {
             className={`${prefixCls}-title`}
             style={{ background: wrapperStyle.background || wrapperStyle.backgroundColor }}
           >{title}</div>
-          {description ? <div className={`${prefixCls}-description`}>{description}</div> : ''}
+          {content ? <div className={`${prefixCls}-description`}>{content}</div> : null}
         </div>
       </div>
     </div>
@@ -78,6 +79,7 @@ Step.propTypes = {
   ]),
   stepLast: PropTypes.bool,
   stepNumber: PropTypes.string,
+  children: PropTypes.node,
   description: PropTypes.any,
   title: PropTypes.any,
 };
