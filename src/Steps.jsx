@@ -36,7 +36,7 @@ export default class Steps extends React.Component {
   render() {
     const props = this.props;
     const { prefixCls, style = {}, className, children, direction,
-            labelPlacement, iconPrefix, status, size, current,
+            labelPlacement, iconPrefix, iconFinish, iconError, status, size, current,
             hideNonProcessDescription, ...restProps } = props;
     const lastIndex = children.length - 1;
     const reLayouted = this.state.lastStepOffsetWidth > 0;
@@ -64,6 +64,8 @@ export default class Steps extends React.Component {
               adjustMarginRight,
               prefixCls,
               iconPrefix,
+              iconFinish,
+              iconError,
               wrapperStyle: style,
             };
 
@@ -97,6 +99,8 @@ export default class Steps extends React.Component {
 Steps.propTypes = {
   prefixCls: PropTypes.string,
   iconPrefix: PropTypes.string,
+  iconFinish: PropTypes.string,
+  iconError: PropTypes.string,
   direction: PropTypes.string,
   labelPlacement: PropTypes.string,
   children: PropTypes.any,
@@ -107,7 +111,9 @@ Steps.propTypes = {
 
 Steps.defaultProps = {
   prefixCls: 'rc-steps',
-  iconPrefix: 'rc',
+  iconPrefix: 'rcicon',
+  iconFinish: 'check',
+  iconError: 'cross',
   direction: 'horizontal',
   labelPlacement: 'horizontal',
   current: 0,

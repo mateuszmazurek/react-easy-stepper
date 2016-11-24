@@ -8,16 +8,16 @@ function isString(str) {
 function Step(props) {
   const {
     className, prefixCls, style, tailWidth,
-    status = 'wait', iconPrefix, icon, wrapperStyle,
+    status = 'wait', iconPrefix, iconFinish, iconError, icon, wrapperStyle,
     adjustMarginRight, stepLast, stepNumber,
     description, children, title, hideDescription, ...restProps } = props;
   const content = children || description;
   const iconClassName = classNames({
     [`${prefixCls}-icon`]: true,
-    [`${iconPrefix}icon`]: true,
-    [`${iconPrefix}icon-${icon}`]: icon && isString(icon),
-    [`${iconPrefix}icon-check`]: !icon && status === 'finish',
-    [`${iconPrefix}icon-cross`]: !icon && status === 'error',
+    [iconPrefix]: true,
+    [`${iconPrefix}-${icon}`]: icon && isString(icon),
+    [`${iconPrefix}-${iconFinish}`]: !icon && status === 'finish',
+    [`${iconPrefix}-${iconError}`]: !icon && status === 'error',
   });
 
   let iconNode;
@@ -76,6 +76,8 @@ Step.propTypes = {
   ]),
   status: PropTypes.string,
   iconPrefix: PropTypes.string,
+  iconFinish: PropTypes.string,
+  iconError: PropTypes.string,
   icon: PropTypes.node,
   adjustMarginRight: PropTypes.oneOfType([
     PropTypes.number,

@@ -1,5 +1,5 @@
 require('rc-steps/assets/index.less');
-require('rc-steps/assets/iconfont.less');
+require('rc-steps/assets/font-awesome.less');
 
 const React = require('react');
 const ReactDOM = require('react-dom');
@@ -8,7 +8,13 @@ const { Steps, Step } = require('rc-steps');
 const container = document.getElementById('__react-content');
 
 ReactDOM.render(
-  <Steps direction="vertical" current={2} hideNonProcessDescription>
+  <Steps
+    direction="vertical"
+    current={2}
+    iconPrefix="fa"
+    iconFinish="check"
+    hideNonProcessDescription
+  >
     <Step title="Test 1" />
     <Step title="Second">
       <h1>Test</h1> 2
