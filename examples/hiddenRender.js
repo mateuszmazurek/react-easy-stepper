@@ -4,8 +4,7 @@ require('rc-steps/assets/iconfont.less');
 
 const React = require('react');
 const ReactDOM = require('react-dom');
-const Steps = require('rc-steps');
-const Step = Steps.Step;
+const { Steps, Step } = require('rc-steps');
 
 const container = document.getElementById('__react-content');
 const data = [{

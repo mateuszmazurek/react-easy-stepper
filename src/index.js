@@ -1,4 +1,4 @@
-const Steps = require('./Steps');
-Steps.Step = require('./Step');
-
-module.exports = Steps;
+module.exports = {
+  Steps: require('./Steps'),
+  Step: require('./Step'),
+};

@@ -4,7 +4,7 @@ require('./nextStep.css');
 
 const React = require('react');
 const ReactDOM = require('react-dom');
-const Steps = require('rc-steps');
+const { Steps, Step } = require('rc-steps');
 
 const container = document.getElementById('__react-content');
 
@@ -46,7 +46,7 @@ const MyForm = React.createClass({
             {
               steps.map((s, i) => {
                 return (
-                  <Steps.Step
+                  <Step
                     key={i}
                     title={s.title}
                   />

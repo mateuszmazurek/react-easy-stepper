@@ -2,7 +2,7 @@ import 'rc-steps/assets/index.less';
 import 'rc-steps/assets/iconfont.less';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Steps, { Step } from 'rc-steps';
+import { Steps, Step } from 'rc-steps';
 
 const Icon = ({ type }) => <i className={`rcicon rcicon-${type}`} />;
 
