@@ -1,14 +1,17 @@
-webpackJsonp([5],{
+webpackJsonp([6],{
 
 /***/ 0:
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(184);
+	module.exports = __webpack_require__(192);
 
 
 /***/ },
 
-/***/ 184:
+/***/ 3:
+2,
+
+/***/ 192:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -18,9 +21,11 @@ webpackJsonp([5],{
 	__webpack_require__(3);
 	
 	var React = __webpack_require__(4);
-	var ReactDOM = __webpack_require__(37);
-	var Steps = __webpack_require__(175);
-	var Step = Steps.Step;
+	var ReactDOM = __webpack_require__(35);
+	
+	var _require = __webpack_require__(181),
+	    Steps = _require.Steps,
+	    Step = _require.Step;
 	
 	var container = document.getElementById('__react-content');
 	var data = [{
@@ -57,7 +62,7 @@ webpackJsonp([5],{
 	        'label',
 	        null,
 	        React.createElement('input', { type: 'checkbox', onChange: this.toggle }),
-	        ' 显示步骤条'
+	        ' \u663E\u793A\u6B65\u9AA4\u6761'
 	      ),
 	      React.createElement('br', null),
 	      React.createElement(

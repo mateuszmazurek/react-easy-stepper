@@ -1,25 +1,31 @@
-webpackJsonp([6],{
+webpackJsonp([7],{
 
 /***/ 0:
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(185);
+	module.exports = __webpack_require__(193);
 
 
 /***/ },
 
-/***/ 185:
+/***/ 3:
+2,
+
+/***/ 193:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	__webpack_require__(2);
 	__webpack_require__(3);
-	__webpack_require__(186);
+	__webpack_require__(194);
 	
 	var React = __webpack_require__(4);
-	var ReactDOM = __webpack_require__(37);
-	var Steps = __webpack_require__(175);
+	var ReactDOM = __webpack_require__(35);
+	
+	var _require = __webpack_require__(181),
+	    Steps = _require.Steps,
+	    Step = _require.Step;
 	
 	var container = document.getElementById('__react-content');
 	
@@ -28,7 +34,7 @@ webpackJsonp([6],{
 	  var arr = [];
 	  for (var i = 0; i < n; i++) {
 	    arr.push({
-	      title: '步骤' + (i + 1)
+	      title: '\u6B65\u9AA4' + (i + 1)
 	    });
 	  }
 	  return arr;
@@ -59,14 +65,14 @@ webpackJsonp([6],{
 	      React.createElement(
 	        'div',
 	        null,
-	        '这个demo随机生成3~6个步骤，初始随机进行到其中一个步骤'
+	        '\u8FD9\u4E2Ademo\u968F\u673A\u751F\u62103~6\u4E2A\u6B65\u9AA4\uFF0C\u521D\u59CB\u968F\u673A\u8FDB\u884C\u5230\u5176\u4E2D\u4E00\u4E2A\u6B65\u9AA4'
 	      ),
 	      React.createElement(
 	        'div',
 	        null,
-	        '当前正在执行第',
+	        '\u5F53\u524D\u6B63\u5728\u6267\u884C\u7B2C',
 	        cs + 1,
-	        '步'
+	        '\u6B65'
 	      ),
 	      React.createElement(
 	        'div',
@@ -75,7 +81,7 @@ webpackJsonp([6],{
 	          Steps,
 	          { current: cs },
 	          steps.map(function (s, i) {
-	            return React.createElement(Steps.Step, {
+	            return React.createElement(Step, {
 	              key: i,
 	              title: s.title
 	            });
@@ -88,7 +94,7 @@ webpackJsonp([6],{
 	        React.createElement(
 	          'button',
 	          { type: 'button', onClick: this.nextStep },
-	          '下一步'
+	          '\u4E0B\u4E00\u6B65'
 	        )
 	      )
 	    );
@@ -99,7 +105,7 @@ webpackJsonp([6],{
 
 /***/ },
 
-/***/ 186:
+/***/ 194:
 2
 
 });

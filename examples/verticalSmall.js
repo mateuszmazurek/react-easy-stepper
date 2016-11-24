@@ -1,14 +1,17 @@
-webpackJsonp([10],{
+webpackJsonp([11],{
 
 /***/ 0:
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(190);
+	module.exports = __webpack_require__(198);
 
 
 /***/ },
 
-/***/ 190:
+/***/ 3:
+2,
+
+/***/ 198:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17,8 +20,11 @@ webpackJsonp([10],{
 	__webpack_require__(3);
 	
 	var React = __webpack_require__(4);
-	var ReactDOM = __webpack_require__(37);
-	var Steps = __webpack_require__(175);
+	var ReactDOM = __webpack_require__(35);
+	
+	var _require = __webpack_require__(181),
+	    Steps = _require.Steps,
+	    Step = _require.Step;
 	
 	var container = document.getElementById('__react-content');
 	
@@ -35,7 +41,7 @@ webpackJsonp([10],{
 	  title: '待运行',
 	  description: '这里是多信息的描述啊这里是多信息的描述啊这里是多信息的描述啊这里是多信息的描述啊这里是多信息的描述啊'
 	}].map(function (s, i) {
-	  return React.createElement(Steps.Step, {
+	  return React.createElement(Step, {
 	    key: i,
 	    status: s.status,
 	    title: s.title,

@@ -1,14 +1,17 @@
-webpackJsonp([8],{
+webpackJsonp([9],{
 
 /***/ 0:
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(188);
+	module.exports = __webpack_require__(196);
 
 
 /***/ },
 
-/***/ 188:
+/***/ 3:
+2,
+
+/***/ 196:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17,8 +20,11 @@ webpackJsonp([8],{
 	__webpack_require__(3);
 	
 	var React = __webpack_require__(4);
-	var ReactDOM = __webpack_require__(37);
-	var Steps = __webpack_require__(175);
+	var ReactDOM = __webpack_require__(35);
+	
+	var _require = __webpack_require__(181),
+	    Steps = _require.Steps,
+	    Step = _require.Step;
 	
 	var container = document.getElementById('__react-content');
 	
@@ -35,7 +41,7 @@ webpackJsonp([8],{
 	  status: 'wait',
 	  title: '待运行'
 	}].map(function (s, i) {
-	  return React.createElement(Steps.Step, {
+	  return React.createElement(Step, {
 	    key: i,
 	    status: s.status,
 	    title: s.title

@@ -1,14 +1,17 @@
-webpackJsonp([2],{
+webpackJsonp([3],{
 
 /***/ 0:
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(181);
+	module.exports = __webpack_require__(189);
 
 
 /***/ },
 
-/***/ 181:
+/***/ 3:
+2,
+
+/***/ 189:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21,13 +24,11 @@ webpackJsonp([2],{
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _reactDom = __webpack_require__(37);
+	var _reactDom = __webpack_require__(35);
 	
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 	
-	var _rcSteps = __webpack_require__(175);
-	
-	var _rcSteps2 = _interopRequireDefault(_rcSteps);
+	var _rcSteps = __webpack_require__(181);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -37,11 +38,11 @@ webpackJsonp([2],{
 	};
 	
 	_reactDom2.default.render(_react2.default.createElement(
-	  _rcSteps2.default,
+	  _rcSteps.Steps,
 	  { current: 1 },
-	  _react2.default.createElement(_rcSteps.Step, { title: '步骤1', icon: _react2.default.createElement(Icon, { type: 'cloud' }) }),
-	  _react2.default.createElement(_rcSteps.Step, { title: '步骤2', icon: 'apple' }),
-	  _react2.default.createElement(_rcSteps.Step, { title: '步骤3', icon: 'github' })
+	  _react2.default.createElement(_rcSteps.Step, { title: '\u6B65\u9AA41', icon: _react2.default.createElement(Icon, { type: 'cloud' }) }),
+	  _react2.default.createElement(_rcSteps.Step, { title: '\u6B65\u9AA42', icon: 'apple' }),
+	  _react2.default.createElement(_rcSteps.Step, { title: '\u6B65\u9AA43', icon: 'github' })
 	), document.getElementById('__react-content'));
 
 /***/ }
