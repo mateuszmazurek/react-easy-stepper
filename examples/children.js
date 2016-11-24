@@ -8,7 +8,7 @@ const { Steps, Step } = require('rc-steps');
 const container = document.getElementById('__react-content');
 
 ReactDOM.render(
-  <Steps direction="vertical" current={2}>
+  <Steps direction="vertical" current={2} hideNonProcessDescription>
     <Step title="Test 1" />
     <Step title="Second">
       <h1>Test</h1> 2

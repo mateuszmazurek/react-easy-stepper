@@ -36,7 +36,8 @@ export default class Steps extends React.Component {
   render() {
     const props = this.props;
     const { prefixCls, style = {}, className, children, direction,
-            labelPlacement, iconPrefix, status, size, current, ...restProps } = props;
+            labelPlacement, iconPrefix, status, size, current,
+            hideNonProcessDescription, ...restProps } = props;
     const lastIndex = children.length - 1;
     const reLayouted = this.state.lastStepOffsetWidth > 0;
     const classString = classNames({
@@ -80,6 +81,11 @@ export default class Steps extends React.Component {
                 np.status = 'wait';
               }
             }
+            if (hideNonProcessDescription &&
+                typeof ele.props.hideDescription === 'undefined' &&
+                (np.status || ele.props.status || status) !== 'process') {
+              np.hideDescription = true;
+            }
             return React.cloneElement(ele, np);
           }, this)
         }
@@ -96,6 +102,7 @@ Steps.propTypes = {
   children: PropTypes.any,
   status: PropTypes.string,
   size: PropTypes.string,
+  hideNonProcessDescription: PropTypes.bool,
 };
 
 Steps.defaultProps = {
@@ -106,4 +113,5 @@ Steps.defaultProps = {
   current: 0,
   status: 'process',
   size: '',
+  hideNonProcessDescription: false,
 };

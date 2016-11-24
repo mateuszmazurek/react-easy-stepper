@@ -10,7 +10,7 @@ function Step(props) {
     className, prefixCls, style, tailWidth,
     status = 'wait', iconPrefix, icon, wrapperStyle,
     adjustMarginRight, stepLast, stepNumber,
-    description, children, title, ...restProps } = props;
+    description, children, title, hideDescription, ...restProps } = props;
   const content = children || description;
   const iconClassName = classNames({
     [`${prefixCls}-icon`]: true,
@@ -36,6 +36,10 @@ function Step(props) {
     [`${prefixCls}-custom`]: icon,
     [className]: !!className,
   });
+  const descriptionClassString = classNames({
+    [`${prefixCls}-description`]: true,
+    ['hidden']: hideDescription,
+  });
   return (
     <div {...restProps}
       className={classString}
@@ -54,7 +58,7 @@ function Step(props) {
             className={`${prefixCls}-title`}
             style={{ background: wrapperStyle.background || wrapperStyle.backgroundColor }}
           >{title}</div>
-          {content ? <div className={`${prefixCls}-description`}>{content}</div> : null}
+          {content ? <div className={descriptionClassString}>{content}</div> : null}
         </div>
       </div>
     </div>
@@ -82,6 +86,7 @@ Step.propTypes = {
   children: PropTypes.node,
   description: PropTypes.any,
   title: PropTypes.any,
+  hideDescription: PropTypes.bool,
 };
 
 module.exports = Step;
