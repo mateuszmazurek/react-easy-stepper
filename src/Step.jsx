@@ -15,12 +15,16 @@ export default class Step extends React.Component {
   children() {
     return this.props.children;
   }
+  restProps(props) {
+    return props;
+  }
   render() {
     const {
       className, prefixCls, style, tailWidth,
       status, iconPrefix, iconFinish, iconError, icon, wrapperStyle,
       adjustMarginRight, stepLast, stepNumber,
-      description, children, title, hideDescription, ...restProps } = this.props;
+      description, children, title, hideDescription, ...props } = this.props;
+    const restProps = this.restProps(props);
     const _children = this.children();
     const _title = this.title();
     const _status = this.status();
