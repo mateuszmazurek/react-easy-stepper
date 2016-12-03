@@ -1,6 +1,6 @@
 {
-  "name": "rc-steps",
-  "version": "2.2.1",
+  "name": "react-easy-stepper",
+  "version": "2.2.11",
   "description": "steps ui component for react",
   "keywords": [
     "react",
@@ -12,7 +12,7 @@
     "lib",
     "assets/*.css"
   ],
-  "homepage": "http://github.com/react-component/steps",
+  "homepage": "http://github.com/mateuszmazurek/react-easy-stepper",
   "maintainers": [
     {
       "name": "yuhangge",
@@ -21,10 +21,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": " git+ssh://git@github.com/react-component/steps.git"
+    "url": " git+ssh://git@github.com/mateuszmazurek/react-easy-stepper.git"
   },
   "bugs": {
-    "url": "http://github.com/react-component/steps/issues"
+    "url": "http://github.com/mateuszmazurek/react-easy-stepper/issues"
   },
   "licenses": "MIT",
   "config": {
